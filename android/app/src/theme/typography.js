@@ -12,15 +12,15 @@ const typography = {
     fontSize: 22,
   },
   h4: {
-    fontFamily: 'Lato-Light',
+    fontFamily: 'Lato-Regular',
     fontSize: 20,
   },
   h5: {
-    fontFamily: 'Lato-Light',
+    fontFamily: 'Lato-Regular',
     fontSize: 18,
   },
   h6: {
-    fontFamily: 'Lato-Light',
+    fontFamily: 'Lato-Regular',
     fontSize: 16,
   },
   h7: {
@@ -28,19 +28,19 @@ const typography = {
     fontSize: 14,
   },
   paragraph18: {
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'Lato-Light',
     fontSize: 18,
   },
   paragraph16: {
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'Lato-Light',
     fontSize: 16,
   },
   paragraph14: {
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'Lato-Light',
     fontSize: 14,
   },
   paragraph12: {
-    fontFamily: 'Lato-Regular',
+    fontFamily: 'Lato-Light',
     fontSize: 12,
   },
 };

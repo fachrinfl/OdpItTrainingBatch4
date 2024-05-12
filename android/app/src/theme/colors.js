@@ -20,6 +20,12 @@ const colors = {
     whiteGrey: '#F5F5F7',
     white: '#FFFFFF',
   },
+  navigationTheme: {
+    dark: false,
+    colors: {
+      background: '#FFFFFF',
+    },
+  },
 };
 
 export default colors;

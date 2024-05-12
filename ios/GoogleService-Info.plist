@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyDTtQ57KnWn7diaD7pIeQei_g5LGxjq0ms</string>
+	<key>GCM_SENDER_ID</key>
+	<string>695286684893</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>org.reactjs.native.example.OdpItTrainingBatch4</string>
+	<key>PROJECT_ID</key>
+	<string>odpittrainingbatch4</string>
+	<key>STORAGE_BUCKET</key>
+	<string>odpittrainingbatch4.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:695286684893:ios:39797b6177109045aacf34</string>
+</dict>
+</plist>

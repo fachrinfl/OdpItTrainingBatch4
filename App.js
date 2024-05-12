@@ -17,6 +17,8 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen';
 
+import {firebase} from '@react-native-firebase/app';
+
 function Section({children, title}) {
   const isDarkMode = useColorScheme() === 'dark';
   return (
@@ -44,6 +46,10 @@ function Section({children, title}) {
 }
 
 function App() {
+  console.log(
+    'Firebase Credentials',
+    JSON.stringify(firebase.apps, undefined, 2),
+  );
   const isDarkMode = useColorScheme() === 'dark';
 
   const backgroundStyle = {

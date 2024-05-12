@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "695286684893",
+    "project_id": "odpittrainingbatch4",
+    "storage_bucket": "odpittrainingbatch4.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:695286684893:android:6632037273445aaaaacf34",
+        "android_client_info": {
+          "package_name": "com.odpittrainingbatch4"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA2xAOYNZh9-jcELE7xWNXq2VtdGLUtrKE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

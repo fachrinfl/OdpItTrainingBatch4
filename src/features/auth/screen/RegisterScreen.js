@@ -1,35 +1,11 @@
 import React, {useState} from 'react';
-import {View, TextInput, Button, StyleSheet, Alert} from 'react-native';
-import auth from '@react-native-firebase/auth';
-import {navigationRef} from '../../../navigation/navigationUtils';
+import {View, TextInput, Button, StyleSheet} from 'react-native';
+import useFirebaseService from '../../../firebase/FirebaseService';
 
 const RegisterScreen = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-
-  const handleRegister = async () => {
-    try {
-      if (email.length && password.length) {
-        await auth().createUserWithEmailAndPassword(email, password);
-        Alert.alert(
-          'Register successfully',
-          'Please, login with your account',
-          [{text: 'OK', onPress: () => navigationRef.goBack()}],
-        );
-      } else {
-        Alert.alert('Invalid credential', 'Your email & password is invalid', [
-          {text: 'OK', onPress: () => {}},
-        ]);
-      }
-    } catch (error) {
-      console.error(error);
-      if (error.code) {
-        Alert.alert(error.code, error.message, [
-          {text: 'OK', onPress: () => {}},
-        ]);
-      }
-    }
-  };
+  const {register} = useFirebaseService();
 
   return (
     <View style={styles.container}>
@@ -48,7 +24,7 @@ const RegisterScreen = () => {
         onChangeText={text => setPassword(text)}
       />
 
-      <Button title="Register" onPress={handleRegister} />
+      <Button title="Register" onPress={() => register(email, password)} />
     </View>
   );
 };

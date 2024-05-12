@@ -1,36 +1,14 @@
-import React, {useEffect, useState} from 'react';
+import React from 'react';
 import {View, StyleSheet, Text, Button} from 'react-native';
-import {navigationRef} from '../../../navigation/navigationUtils';
-import auth from '@react-native-firebase/auth';
+import useFirebaseService from '../../../firebase/FirebaseService';
 
 const HomeScreen = () => {
-  const [user, setUser] = useState(null);
-
-  useEffect(() => {
-    const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
-    return subscriber;
-  }, []);
-
-  const onAuthStateChanged = currentUser => {
-    setUser(currentUser);
-  };
-
-  const handleLogout = async () => {
-    try {
-      await auth().signOut();
-      navigationRef.reset({
-        index: 0,
-        routes: [{name: 'LoginScreen'}],
-      });
-    } catch (error) {
-      console.error(error);
-    }
-  };
+  const {user, logout} = useFirebaseService();
 
   return (
     <View style={styles.screen}>
       {user && <Text>{user.email}</Text>}
-      <Button title="Logout" onPress={handleLogout} />
+      <Button title="Logout" onPress={() => logout()} />
     </View>
   );
 };

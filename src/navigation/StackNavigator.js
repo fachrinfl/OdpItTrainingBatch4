@@ -9,7 +9,6 @@ const Stack = createNativeStackNavigator();
 
 const StackNavigator = () => {
   const {user, loading} = useFirebaseService();
-  console.log(user);
   const initialRoute = user ? 'HomeScreen' : 'LoginScreen';
 
   if (loading) {
@@ -25,7 +24,13 @@ const StackNavigator = () => {
           headerShown: false,
         }}
       />
-      <Stack.Screen name="RegisterScreen" component={RegisterScreen} />
+      <Stack.Screen
+        name="RegisterScreen"
+        component={RegisterScreen}
+        options={{
+          headerShown: false,
+        }}
+      />
       <Stack.Screen name="HomeScreen" component={HomeScreen} />
     </Stack.Navigator>
   );

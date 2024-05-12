@@ -5,14 +5,17 @@ import {navigationRef} from '../navigation/navigationUtils';
 
 const useFirebaseService = () => {
   const [user, setUser] = useState(null);
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
+    setLoading(true);
     const subscriber = auth().onAuthStateChanged(onAuthStateChanged);
     return subscriber;
   }, []);
 
   const onAuthStateChanged = currentUser => {
     setUser(currentUser);
+    setLoading(false);
   };
 
   const register = async (email, password) => {
@@ -79,6 +82,7 @@ const useFirebaseService = () => {
     login,
     logout,
     user,
+    loading,
   };
 };
 

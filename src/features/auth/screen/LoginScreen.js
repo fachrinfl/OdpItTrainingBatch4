@@ -13,7 +13,7 @@ const LoginScreen = () => {
         await auth().signInWithEmailAndPassword(email, password);
         navigationRef.reset({
           index: 0,
-          routes: [{name: 'LoginScreen'}],
+          routes: [{name: 'HomeScreen'}],
         });
       } else {
         Alert.alert('Invalid credential', 'Your email & password is invalid', [
